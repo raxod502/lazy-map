@@ -101,7 +101,7 @@ special pretty-print dispatch function:
 Check out the [unit tests] for more information on the exact behavior
 of lazy maps.
 
-[unit tests]: src/lazy_map/core_test.clj
+[unit tests]: test/lazy_map/core_test.clj
 
 ## Organization
 
