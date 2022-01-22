@@ -1,4 +1,4 @@
-(defproject raxod502/lazy-map "0.1.1-SNAPSHOT"
+(defproject raxod502/lazy-map "1.0.0"
   :description "Lazy maps for Clojure"
   :url "https://github.com/raxod502/lazy-map"
   :license {:name "Eclipse Public License"
