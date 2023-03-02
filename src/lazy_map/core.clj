@@ -126,9 +126,8 @@
   (count [this] 2)
   (empty [this] false)
   (equiv [this o]
-    (.equiv
-      [key_ (force val_)]
-      o))
+    (and (instance? clojure.lang.IPersistentCollection o)
+         (.equiv [key_ (force val_)] o)))
 
   clojure.lang.IPersistentStack
   (peek [this] (force val_))
@@ -249,9 +248,9 @@
   (cons [this o]
     (LazyMap. (.cons (or contents {}) o)))
   (equiv [this o]
-    (.equiv
-      ^clojure.lang.IPersistentCollection
-      (into {} this) o))
+    (and (instance? clojure.lang.IPersistentCollection o)
+         (.equiv ^clojure.lang.IPersistentCollection
+                 (into {} this) o)))
 
   clojure.lang.IPersistentMap
   (assoc [this key val]
